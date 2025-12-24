@@ -1,0 +1,193 @@
+.projek-section {
+  padding: 100px 80px;
+  background: radial-gradient(
+      circle at top,
+      rgba(0, 229, 255, 0.15),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      #071925 0%,
+      #081B26 100%
+    );
+  background-repeat: repeat;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+/* ===== HEADER ===== */
+.projek-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.projek-header h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== DEKOR GAMBAR ===== */
+.projek-decor {
+  position: relative;
+  margin: 40px auto;
+  height: 240px;
+  right: 140px;
+}
+
+.decor {
+  position: absolute;
+  width: 400px;
+  opacity: 1;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+}
+
+/* posisi custom */
+.decor-1 {
+  left: 50%;
+  transform: translateX(-480px) rotate(-12deg);
+  top: 20px;
+}
+
+.decor-2 {
+  left: 50%;
+  transform: translateX(-50px);
+  top: 0;
+  z-index: 1;
+}
+
+.decor-3 {
+  left: 50%;
+  transform: translateX(380px) rotate(14deg);
+  top: 30px;
+}
+
+/* ===== PROJECT ITEM ===== */
+.projek-item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 110px;
+  margin-top: 60px;
+}
+
+.projek-item.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===== IMAGE ===== */
+.projek-image {
+  flex: 1;
+  padding: 15px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  /* background: rgba(255, 255, 255, 0.08); */
+}
+
+.projek-image img {
+  width: 100%;
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+
+.projek-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== CONTENT ===== */
+.projek-content {
+  flex: 1;
+}
+
+.projek-content h3 {
+  font-size: 2.25rem;
+  margin-bottom: 6px;
+}
+
+.projek-content h4 {
+  font-size: 1.8rem;
+  color: #9fd4ff;
+  margin-bottom: 14px;
+}
+
+.projek-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  text-align: justify;
+}
+
+.projek-content span {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 10px 20px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(140, 220, 255, 0.6);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.projek-content span:hover {
+  background: rgba(0, 229, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.projek-more {
+  text-align: center;
+  border: 1px solid #adcef2;
+  border-radius: 100%;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 36px;
+  
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(140, 220, 255, 0.6);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.projek-more:hover {
+  background: rgba(0, 229, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .projek-section {
+    padding: 80px 30px;
+  }
+
+  .projek-item,
+  .projek-item.reverse {
+    flex-direction: column;
+  }
+
+  .projek-decor {
+    height: 200px;
+  }
+
+  .decor {
+    width: 110px;
+  }
+}

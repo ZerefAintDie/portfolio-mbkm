@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #081B26;
+  --foreground: #ACDEF2;
 }
 
 @theme inline {
@@ -14,13 +14,32 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #081B26;
+    --foreground: #ACDEF2;
   }
 }
 
+/* globals.css */
+
+/* Default body font */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  background-color: #081B26; /* dark theme */
+  color: #ACDEF2;
+}
+
+/* Heading pakai Coolvetica */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-coolvetica), sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.neon-text {
+  background: linear-gradient(90deg, #00e5ff, #ff3d81, #2eff7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section {
+  scroll-margin-top: 120px;
 }

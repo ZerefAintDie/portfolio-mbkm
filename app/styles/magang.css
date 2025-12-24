@@ -1,0 +1,82 @@
+.magang {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 100px 165px;
+
+  background: 
+    radial-gradient(
+      circle at center top,
+      rgba(0, 229, 255, 0.15),
+      transparent 80%
+    ),
+    linear-gradient(
+      180deg,
+      #071925 0%,
+      #081B26 10%
+    );
+  border-radius: 50px 50px 0px 0;
+  align-items: center;
+  background-color: #081B26;
+
+  /* ANIMATION DEFAULT (HIDDEN) */
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+/* SHOW ON SCROLL */
+.magang.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* IMAGE */
+.magang-image {
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 800px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(140, 220, 255, 0.6);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.magang-image:hover {
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.3);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+.magang-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXT */
+.magang-content h2 {
+  font-family: var(--font-coolvetica);
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.magang-content p {
+  font-family: var(--font-montserrat);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(234, 234, 255, 0.85);
+  text-align: justify;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .magang {
+    grid-template-columns: 1fr;
+  }
+}

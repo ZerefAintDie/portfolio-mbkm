@@ -1,0 +1,140 @@
+.profile-section {
+  padding: 120px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.profile-title {
+  text-align: center;
+  font-family: var(--font-coolvetica);
+  font-size: 3.6rem;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+/* LEADER */
+.leader-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+/* GRID */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.profile-card {
+  display: flex;
+  gap: 28px;
+  padding: 28px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(140, 220, 255, 0.6);
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.profile-card:hover {
+  background: rgba(0, 229, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+.profile-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LEADER STYLE */
+.profile-card.leader {
+  max-width: 720px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ddd;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 1px solid #ACDEF2;
+}
+
+/* INFO */
+.profile-info h3 {
+  font-family: var(--font-coolvetica);
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  color: #ffffff;
+}
+
+.profile-info .role {
+  font-family: var(--font-montserrat);
+  font-size: 0.85rem;
+  color: rgba(234, 234, 255, 0.7);
+}
+
+.profile-info ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 14px;
+}
+
+.profile-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--font-montserrat);
+  font-size: 0.8rem;
+  color: rgba(234, 234, 255, 0.85);
+  margin-bottom: 6px;
+}
+
+.profile-info img {
+  width: 16px;
+  height: 16px;
+}
+
+.profile-link {
+  color: #eaf6ff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.profile-link:hover {
+  color: #9fd4ff;
+  text-shadow: 0 0 8px rgba(120, 220, 255, 0.6);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-info ul {
+    align-items: center;
+  }
+}
