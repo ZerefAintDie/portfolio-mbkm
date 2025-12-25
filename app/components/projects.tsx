@@ -74,7 +74,7 @@ export default function Projects() {
           <p>
             Projek ini berfokus pada pengolahan data besar (Big Data) menggunakan database konvensional dan penjadwalan dengan Airflow. Output akhir berupa dashboard untuk melakukan analisis tren film dari tahun ke tahun.
           </p>
-          <span>Python</span>
+          <span>PowerBI</span>
           <span>SQL Database</span>
           <span>Airflow Scheduler</span>
         </div>
